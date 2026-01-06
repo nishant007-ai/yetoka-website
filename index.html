@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ethocot | Smart Road Riding Platform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  border-bottom:1px solid #111;
+}
+
+header h1{
+  color:#00f7ff;
+  letter-spacing:2px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:25px;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#00f7ff;
+}
+
+/* ===== HERO ===== */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover;
+}
+
+.hero h2{
+  font-size:3rem;
+  color:#00f7ff;
+  text-shadow:0 0 30px #00f7ff;
+}
+
+.hero p{
+  margin-top:15px;
+  color:#ccc;
+  max-width:700px;
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:100px 60px;
+}
+
+section h3{
+  text-align:center;
+  font-size:2.6rem;
+  color:#00f7ff;
+  margin-bottom:20px;
+}
+
+section p{
+  text-align:center;
+  color:#aaa;
+  max-width:900px;
+  margin:auto;
+}
+
+/* ===== TEAM ===== */
+.team-container{
+  margin-top:70px;
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.team-card{
+  width:280px;
+  background:#050505;
+  border-radius:20px;
+  padding:15px;
+  text-align:center;
+  transition:.5s;
+  transform-style:preserve-3d;
+}
+
+.team-card img{
+  width:100%;
+  height:auto;
+  border-radius:15px;
+  object-fit:contain;   /* FULL PHOTO – NO CUT */
+  background:#000;
+  transition:.5s;
+}
+
+/* NEON + 3D */
+.team-card:hover{
+  transform:rotateY(12deg) rotateX(6deg) translateY(-15px);
+  box-shadow:0 0 35px #00f7ff;
+}
+
+.team-card:hover img{
+  box-shadow:0 0 30px #00f7ff, 0 0 60px #00f7ff;
+}
+
+.team-card h4{
+  margin-top:15px;
+  color:#00f7ff;
+}
+
+.team-card span{
+  color:#777;
+  font-size:.9rem;
+}
+
+/* ===== ROAD FEATURES ===== */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:70px;
+}
+
+.feature-box{
+  background:#050505;
+  padding:30px;
+  border-radius:20px;
+  transition:.4s;
+}
+
+.feature-box:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 0 30px #00f7ff;
+}
+
+.feature-box h4{
+  color:#00f7ff;
+  margin-bottom:10px;
+}
+
+.feature-box p{
+  color:#aaa;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#020202;
+  padding:30px;
+  text-align:center;
+  border-top:1px solid #111;
+}
+
+footer p{
+  color:#777;
+  font-size:.9rem;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:1s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header{
+    padding:15px;
+    flex-direction:column;
+  }
+  .hero h2{
+    font-size:2.2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ETHOCOT</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#team">Team</a>
+    <a href="#road">Road Trips</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h2>Road-Based Smart Riding Platform</h2>
+    <p>Ethocot connects riders, routes, and road intelligence for safer, smarter journeys.</p>
+  </div>
+</div>
+
+<section id="about" class="reveal">
+  <h3>About Ethocot</h3>
+  <p>
+    Ethocot is a next-gen road-trip and smart riding platform focused on safety,
+    ride analytics, intelligent navigation, and group ride coordination.
+  </p>
+</section>
+
+<section id="team" class="reveal">
+  <h3>Our Team</h3>
+  <div class="team-container">
+    <div class="team-card">
+      <img src="images/samarth.jpg">
+      <h4>Samarth</h4>
+      <span>Co-Founder</span>
+    </div>
+
+    <div class="team-card">
+      <img src="images/sandesh.jpg">
+      <h4>Sandesh</h4>
+      <span>Tech Lead</span>
+    </div>
+
+    <div class="team-card">
+      <img src="images/pawal.jpg">
+      <h4>Pawal</h4>
+      <span>Operations Lead</span>
+    </div>
+  </div>
+</section>
+
+<section id="road" class="reveal">
+  <h3>Smart Road Trips</h3>
+  <div class="features">
+    <div class="feature-box">
+      <h4>🛣 Smart Routes</h4>
+      <p>AI-optimized routes using traffic, safety, and road conditions.</p>
+    </div>
+    <div class="feature-box">
+      <h4>🚴 Ride Tracking</h4>
+      <p>Monitor speed, distance, fuel efficiency, and trip insights.</p>
+    </div>
+    <div class="feature-box">
+      <h4>📍 Group Rides</h4>
+      <p>Live tracking, SOS alerts, and group coordination.</p>
+    </div>
+    <div class="feature-box">
+      <h4>⚡ Smart Alerts</h4>
+      <p>Instant hazard, weather, and route change alerts.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ethocot.com | Smart Road Riding Platform</p>
+</footer>
+
+<script>
+window.addEventListener("scroll",()=>{
+  document.querySelectorAll(".reveal").forEach(el=>{
+    let top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-100){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
